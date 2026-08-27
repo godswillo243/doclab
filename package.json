@@ -1,0 +1,24 @@
+{
+  "name": "doclab",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "server"
+  ],
+  "scripts": {
+    "dev:web": "bun --filter '@doclab/web' dev",
+    "dev:server": "bun --filter '@doclab/server' dev",
+    "dev": "bun --parallel --filter '*' dev",
+    "build": "bun --workspaces run build",
+    "typecheck": "bun --workspaces run typecheck"
+  }
+}

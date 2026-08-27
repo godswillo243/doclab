@@ -1,0 +1,15 @@
+{
+  "name": "@doclab/api-client",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {
+    "@doclab/types": "*"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
