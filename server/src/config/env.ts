@@ -1,4 +1,7 @@
 import { z } from "zod";
+import dotenv from "dotenv";
+
+dotenv.config({ quiet: true });
 
 const envSchema = z.object({
   NODE_ENV: z
@@ -6,6 +9,7 @@ const envSchema = z.object({
     .default("development"),
   PORT: z.coerce.number().default(4000),
   CLIENT_URL: z.url(),
+  DATABASE_URL: z.url(),
 });
 
 const parsed = envSchema.safeParse(process.env);

@@ -4,6 +4,7 @@ import helmet from "helmet";
 
 import { env } from "./config/env.js";
 import apiRouter from "./routes/index.js";
+import morgan from "morgan";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use(
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan("dev", { immediate: false }));
 
 app.get("/", (_req, res) => {
   res.json({
