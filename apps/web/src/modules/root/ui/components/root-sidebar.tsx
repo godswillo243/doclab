@@ -32,7 +32,11 @@ const SidebarNavListItem = ({ href, icon, label }: SidebarNavListItemProps) => {
 
 export const RootSidebar = () => {
   return (
-    <aside className={cn("min-w-48 flex flex-col items-start gap-4")}>
+    <aside
+      className={cn(
+        "min-w-48 flex flex-col items-start gap-4 border-r h-full p-4",
+      )}
+    >
       <RootSidebarNewDropdown />
       <div className="w-full flex flex-col gap-2">
         <SidebarNavListItem href="/home" icon={icons.home} label="Home" />

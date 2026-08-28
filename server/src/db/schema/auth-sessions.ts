@@ -16,7 +16,7 @@ export const authSessions = pgTable("auth_sessions", {
   revokedAt: timestamp("revoked_at", {
     withTimezone: true,
   }),
-  deviceId: text("device_id"),
+  deviceId: text("device_id").notNull(),
   deviceName: text("device_name"),
   userAgent: text("user_agent"),
   ipAddress: text("ip_address"),

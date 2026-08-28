@@ -7,9 +7,9 @@ interface RootLayoutProps {
 }
 export const RootLayout = ({ children }: RootLayoutProps) => {
   return (
-    <main className="w-screen h-dvh min-h-dvh relative">
+    <main className="w-screen h-dvh min-h-dvh relative flex flex-col">
       <RootNavbar />
-      <div className="flex flex-row gap-2 p-4">
+      <div className="flex flex-row gap-2 px-4 h-full">
         <RootSidebar />
         <div>{children}</div>
       </div>
